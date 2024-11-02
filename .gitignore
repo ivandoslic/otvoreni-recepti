@@ -1,1 +1,4 @@
-./exportScripts.txt
+exportScripts.txt
+novi_csv.csv
+novi_json.json
+.env

@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  recipesdb:
+    image: 'ivandoslic/recipesdb:latest'
+    container_name: recipesdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=recipesDb
+    ports:
+      - "5435:5432"

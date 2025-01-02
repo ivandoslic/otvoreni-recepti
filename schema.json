@@ -1,0 +1,143 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://or.fer.unizg.hr/otvorenirecepti.json",
+    "type": "array",
+    "title": "Otvoreni Recepti",
+    "description": "Skup recepata za otvoreno računarstvo.",
+    "items": {
+        "type": "object",
+        "title": "Recept",
+        "required": [
+            "id_recepta",
+            "naziv_recepta",
+            "opis_recepta",
+            "recept_youtube_url",
+            "koraci_recepta",
+            "recept_wiki_url",
+            "vrijeme_pripreme",
+            "vrijeme_kuhanja",
+            "broj_porcija",
+            "tezina",
+            "drzava",
+            "sastojci"
+        ],
+        "properties": {
+            "id_recepta": {
+                "type": "integer",
+                "title": "ID recepta",
+                "description": "Jedinstveni identifikator recepta."
+            },
+            "naziv_recepta": {
+                "type": "string",
+                "title": "Naziv recepta",
+                "description": "Naziv jela za koji je recept."
+            },
+            "opis_recepta": {
+                "type": "string",
+                "title": "Opis recepta",
+                "description": "Detaljan opis recepta."
+            },
+            "recept_youtube_url": {
+                "type": "string",
+                "title": "YouTube URL recepta",
+                "description": "YouTube poveznica na videozapis pripreme recepta."
+            },
+            "koraci_recepta": {
+                "type": "string",
+                "title": "Koraci pripreme recepta",
+                "description": "Detaljan popis koraka za pripremu recepta."
+            },
+            "recept_wiki_url": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Wikipedia URL recepta",
+                "description": "Poveznica na Wikipedia stranicu o receptu, ako postoji."
+            },
+            "vrijeme_pripreme": {
+                "type": "string",
+                "title": "Vrijeme pripreme",
+                "description": "Vrijeme potrebno za pripremu sastojaka (u minutama)."
+            },
+            "vrijeme_kuhanja": {
+                "type": "string",
+                "title": "Vrijeme kuhanja",
+                "description": "Vrijeme potrebno za kuhanje (u minutama)."
+            },
+            "broj_porcija": {
+                "type": "integer",
+                "title": "Broj porcija",
+                "description": "Broj porcija koje recept omogućuje."
+            },
+            "tezina": {
+                "type": "string",
+                "title": "Težina pripreme",
+                "description": "Razina težine pripreme recepta (npr. lako, srednje, teško)."
+            },
+            "drzava": {
+                "type": "object",
+                "title": "Država podrijetla",
+                "description": "Informacije o državi iz koje recept potječe.",
+                "properties": {
+                    "drzava_id": {
+                        "type": "integer",
+                        "title": "ID države",
+                        "description": "Jedinstveni identifikator države."
+                    },
+                    "naziv_drzave": {
+                        "type": "string",
+                        "title": "Naziv države",
+                        "description": "Ime države podrijetla recepta."
+                    },
+                    "glavni_grad": {
+                        "type": "string",
+                        "title": "Glavni grad",
+                        "description": "Glavni grad države podrijetla recepta."
+                    },
+                    "zastava_url": {
+                        "type": "string",
+                        "title": "URL zastave",
+                        "description": "Poveznica na sliku zastave države."
+                    },
+                    "regija": {
+                        "type": "string",
+                        "title": "Regija",
+                        "description": "Regija države podrijetla recepta."
+                    }
+                }
+            },
+            "sastojci": {
+                "type": "array",
+                "title": "Popis sastojaka",
+                "description": "Popis svih sastojaka potrebnih za recept.",
+                "items": {
+                    "type": "object",
+                    "title": "Sastojak",
+                    "required": [
+                        "naziv_sastojka",
+                        "kolicina",
+                        "mjerna_jedinica"
+                    ],
+                    "properties": {
+                        "naziv_sastojka": {
+                            "type": "string",
+                            "title": "Naziv sastojka",
+                            "description": "Ime sastojka potrebnog za recept."
+                        },
+                        "kolicina": {
+                            "type": "number",
+                            "title": "Količina sastojka",
+                            "description": "Količina potrebna za određeni sastojak."
+                        },
+                        "mjerna_jedinica": {
+                            "type": "string",
+                            "title": "Mjerna jedinica",
+                            "description": "Mjerna jedinica za količinu sastojka (npr. grami, mililitri)."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

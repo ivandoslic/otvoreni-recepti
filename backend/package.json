@@ -1,0 +1,21 @@
+{
+  "name": "or-recepti-backend",
+  "version": "1.0.0",
+  "description": "Backend za laboratorijske vjezbe iz Otvorenog Racurastva",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "recepti",
+    "or-recepti",
+    "or-labosi",
+    "or-backend"
+  ],
+  "author": "Ivan Doslic",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}

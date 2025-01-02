@@ -1,5 +1,23 @@
 version: '3.8'
 services:
+  frontend:
+    image: ivandoslic/recipes_frontend:v1
+    container_name: recipes_frontend
+    ports:
+      - "80:80"
+  backend:
+    image: ivandoslic/recipes_backend:v3
+    container_name: recipes_backend
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=recipesdb
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=root
+      - DB_NAME=recipesDb
+    depends_on:
+      - recipesdb
   recipesdb:
     image: 'ivandoslic/recipesdb:latest'
     container_name: recipesdb

@@ -1,0 +1,542 @@
+[
+  {
+    "id_recepta": 1,
+    "naziv_recepta": "Pašticada",
+    "opis_recepta": "Tradicionalno jelo od goveđeg mesa u bogatom umaku, najčešće posluženo s domaćim njokima.",
+    "recept_youtube_url": "https://youtu.be/XAE1C4bC9IE?si=yV25H16s-deEe2zB",
+    "koraci_recepta": "Meso se marinira preko noći, zatim se polako kuha u umaku od vina, začina i povrća.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Pa%C5%A1ticada",
+    "vrijeme_pripreme": "02:00:00",
+    "vrijeme_kuhanja": "03:00:00",
+    "broj_porcija": 6,
+    "tezina": "Srednje",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Goveđi but",
+        "kolicina": 1.6,
+        "mjerna_jedinica": "kg"
+      },
+      {
+        "naziv_sastojka": "Suha slanina",
+        "kolicina": 0.15,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Mast", "kolicina": 0.15, "mjerna_jedinica": "kg" },
+      { "naziv_sastojka": "Ulje", "kolicina": 0.15, "mjerna_jedinica": "l" },
+      { "naziv_sastojka": "Mrkva", "kolicina": 0.4, "mjerna_jedinica": "kg" },
+      { "naziv_sastojka": "Celer", "kolicina": 0.1, "mjerna_jedinica": "kg" },
+      {
+        "naziv_sastojka": "Korijen peršina",
+        "kolicina": 0.1,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Luk", "kolicina": 2.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Češnjak",
+        "kolicina": 5.0,
+        "mjerna_jedinica": "češnja"
+      },
+      {
+        "naziv_sastojka": "Korijander u zrnu",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žličica"
+      }
+    ]
+  },
+  {
+    "id_recepta": 2,
+    "naziv_recepta": "Sarma",
+    "opis_recepta": "Listovi kiselog kupusa punjeni mljevenim mesom i rižom, kuhani u bogatom umaku.",
+    "recept_youtube_url": "https://youtu.be/SGswt_asbzE?si=FtTVa9Y_umo-6RSP",
+    "koraci_recepta": "Listove kiselog kupusa napuniti smjesom mesa i riže, zamotati i kuhati na laganoj vatri nekoliko sati.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Sarma",
+    "vrijeme_pripreme": "00:30:00",
+    "vrijeme_kuhanja": "02:00:00",
+    "broj_porcija": 6,
+    "tezina": "Srednje",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Fant za punjenu papriku i sarmu",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "paket"
+      },
+      {
+        "naziv_sastojka": "Mljeveno meso",
+        "kolicina": 0.6,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Riža", "kolicina": 0.07, "mjerna_jedinica": "kg" },
+      {
+        "naziv_sastojka": "Kiseli kupus",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "glava"
+      },
+      {
+        "naziv_sastojka": "Panceta",
+        "kolicina": 6.0,
+        "mjerna_jedinica": "ploška"
+      },
+      { "naziv_sastojka": "Passata", "kolicina": 0.15, "mjerna_jedinica": "l" },
+      {
+        "naziv_sastojka": "Dimljena paprika",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žličica"
+      },
+      {
+        "naziv_sastojka": "Vegeta",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žličica"
+      }
+    ]
+  },
+  {
+    "id_recepta": 3,
+    "naziv_recepta": "Čobanac",
+    "opis_recepta": "Spicy gulaš od raznih vrsta mesa s paprikom i začinima, tradicionalno pripreman na otvorenoj vatri.",
+    "recept_youtube_url": "https://youtu.be/_jWkjbgh9QY?si=Uqt4Ddl92fNUbF-A",
+    "koraci_recepta": "Razne vrste mesa izrezati i kuhati sa začinima i paprikom, dodati krumpir po želji.",
+    "recept_wiki_url": null,
+    "vrijeme_pripreme": "00:30:00",
+    "vrijeme_kuhanja": "02:30:00",
+    "broj_porcija": 8,
+    "tezina": "Teško",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Fant mješavina za slavonski čobanac - ljuti",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "paket"
+      },
+      { "naziv_sastojka": "Voda", "kolicina": 2.0, "mjerna_jedinica": "l" },
+      {
+        "naziv_sastojka": "Svinjetina",
+        "kolicina": 0.4,
+        "mjerna_jedinica": "kg"
+      },
+      {
+        "naziv_sastojka": "Junetina",
+        "kolicina": 0.4,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Lovor", "kolicina": 1.0, "mjerna_jedinica": "list" },
+      {
+        "naziv_sastojka": "Crvena paprika",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Bijelo vino",
+        "kolicina": 0.1,
+        "mjerna_jedinica": "l"
+      }
+    ]
+  },
+  {
+    "id_recepta": 4,
+    "naziv_recepta": "Fuži s tartufima",
+    "opis_recepta": "Tradicionalna istarska tjestenina s umakom od tartufa.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=R0ehjlAgGwU",
+    "koraci_recepta": "Skuhati fuže, pripremiti umak od tartufa i poslužiti.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Fu%C5%BEi",
+    "vrijeme_pripreme": "00:15:00",
+    "vrijeme_kuhanja": "00:15:00",
+    "broj_porcija": 4,
+    "tezina": "Jednostavno",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Pšenično oštro brašno",
+        "kolicina": 0.4,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Jaja", "kolicina": 2.0, "mjerna_jedinica": "kom" },
+      { "naziv_sastojka": "Ulje", "kolicina": 1.0, "mjerna_jedinica": "žlica" },
+      {
+        "naziv_sastojka": "Bijelo vino",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "žlice"
+      },
+      { "naziv_sastojka": "Sol", "kolicina": 1.0, "mjerna_jedinica": "žlica" },
+      { "naziv_sastojka": "Maslac", "kolicina": 0.1, "mjerna_jedinica": "kg" },
+      {
+        "naziv_sastojka": "Tartufi",
+        "kolicina": 0.05,
+        "mjerna_jedinica": "kg"
+      },
+      {
+        "naziv_sastojka": "Peršin",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žlica"
+      },
+      {
+        "naziv_sastojka": "Vegeta Maestro crni papar mljeveni",
+        "kolicina": 0.5,
+        "mjerna_jedinica": "žličica"
+      }
+    ]
+  },
+  {
+    "id_recepta": 5,
+    "naziv_recepta": "Peka",
+    "opis_recepta": "Jelo pripremljeno ispod peke s mesom i povrćem, polako kuhano u vlastitom soku.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=_AuZrBuZBC4",
+    "koraci_recepta": "Pripremiti meso i povrće, peći ispod peke s krumpirom i začinima.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Peka",
+    "vrijeme_pripreme": "00:20:00",
+    "vrijeme_kuhanja": "03:00:00",
+    "broj_porcija": 6,
+    "tezina": "Teško",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Svinjetina",
+        "kolicina": 4.0,
+        "mjerna_jedinica": "kom"
+      },
+      { "naziv_sastojka": "Luk", "kolicina": 2.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Patlidžan",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Tikvica",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Crvena paprika",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Žuta paprika",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Krumpir",
+        "kolicina": 7.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Češnjak",
+        "kolicina": 3.0,
+        "mjerna_jedinica": "češnja"
+      },
+      {
+        "naziv_sastojka": "Gljive",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "paket"
+      },
+      {
+        "naziv_sastojka": "Maslinovo ulje",
+        "kolicina": 3.0,
+        "mjerna_jedinica": "dl"
+      }
+    ]
+  },
+  {
+    "id_recepta": 6,
+    "naziv_recepta": "Brudet",
+    "opis_recepta": "Dalmatinski riblji paprikaš od raznih vrsta ribe, kuhano s vinom, lukom i rajčicama.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=0riEEGi-VyE",
+    "koraci_recepta": "Razne vrste ribe kuhati s lukom, rajčicama, vinom i začinima.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Brodet",
+    "vrijeme_pripreme": "00:20:00",
+    "vrijeme_kuhanja": "01:00:00",
+    "broj_porcija": 4,
+    "tezina": "Srednje",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      { "naziv_sastojka": "Riba", "kolicina": 0.5, "mjerna_jedinica": "kg" },
+      { "naziv_sastojka": "Luk", "kolicina": 1.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Češnjak",
+        "kolicina": 3.0,
+        "mjerna_jedinica": "češnja"
+      },
+      {
+        "naziv_sastojka": "Peršin",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "žlice"
+      },
+      {
+        "naziv_sastojka": "Čili papričica",
+        "kolicina": 0.5,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Kapari",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žlica"
+      },
+      {
+        "naziv_sastojka": "Masline",
+        "kolicina": 6.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Crno vino",
+        "kolicina": 0.5,
+        "mjerna_jedinica": "dl"
+      },
+      { "naziv_sastojka": "Pelati", "kolicina": 240.0, "mjerna_jedinica": "g" }
+    ]
+  },
+  {
+    "id_recepta": 7,
+    "naziv_recepta": "Zagrebački odrezak",
+    "opis_recepta": "Panirani teleći odrezak punjen sirom i šunkom, sličan bečkom odresku.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=RKNAiYN0O4c",
+    "koraci_recepta": "Teleći odrezak napuniti sirom i šunkom, zatim panirati i pržiti.",
+    "recept_wiki_url": null,
+    "vrijeme_pripreme": "00:15:00",
+    "vrijeme_kuhanja": "00:20:00",
+    "broj_porcija": 2,
+    "tezina": "Jednostavno",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Svinjski lungić",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Brašno",
+        "kolicina": 5.0,
+        "mjerna_jedinica": "žlica"
+      },
+      {
+        "naziv_sastojka": "Krušne mrvice",
+        "kolicina": 5.0,
+        "mjerna_jedinica": "žlica"
+      },
+      { "naziv_sastojka": "Jaja", "kolicina": 2.0, "mjerna_jedinica": "kom" },
+      { "naziv_sastojka": "Šunka", "kolicina": 0.1, "mjerna_jedinica": "kg" },
+      { "naziv_sastojka": "Sir", "kolicina": 0.1, "mjerna_jedinica": "kg" },
+      {
+        "naziv_sastojka": "Kiseli krastavci",
+        "kolicina": 4.0,
+        "mjerna_jedinica": "kom"
+      },
+      { "naziv_sastojka": "Ulje", "kolicina": 100.0, "mjerna_jedinica": "ml" },
+      {
+        "naziv_sastojka": "Vegeta natur",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žlica"
+      },
+      {
+        "naziv_sastojka": "Senf estragon",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "žlica"
+      }
+    ]
+  },
+  {
+    "id_recepta": 8,
+    "naziv_recepta": "Janjetina s ražnja",
+    "opis_recepta": "Pečena janjetina s ražnja, obično poslužena s krumpirom i povrćem.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=zrhmxqRly2o",
+    "koraci_recepta": "Janjetinu začiniti i peći na ražnju, poslužiti s krumpirom.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Janjetina",
+    "vrijeme_pripreme": "00:10:00",
+    "vrijeme_kuhanja": "02:00:00",
+    "broj_porcija": 6,
+    "tezina": "Teško",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Krumpir",
+        "kolicina": 500.0,
+        "mjerna_jedinica": "g"
+      },
+      {
+        "naziv_sastojka": "Janjetina",
+        "kolicina": 16.0,
+        "mjerna_jedinica": "kg"
+      }
+    ]
+  },
+  {
+    "id_recepta": 9,
+    "naziv_recepta": "Riblja juha",
+    "opis_recepta": "Lagano jelo od raznih vrsta ribe, kuhano s povrćem.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=U0AKuwE5b7A",
+    "koraci_recepta": "Ribu kuhati s povrćem i začinima, poslužiti kao juhu.",
+    "recept_wiki_url": null,
+    "vrijeme_pripreme": "00:15:00",
+    "vrijeme_kuhanja": "00:40:00",
+    "broj_porcija": 4,
+    "tezina": "Jednostavno",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Bijela riba",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "kg"
+      },
+      { "naziv_sastojka": "Riža", "kolicina": 0.15, "mjerna_jedinica": "kg" },
+      {
+        "naziv_sastojka": "Maslinovo ulje",
+        "kolicina": 0.05,
+        "mjerna_jedinica": "l"
+      },
+      { "naziv_sastojka": "Mrkva", "kolicina": 0.2, "mjerna_jedinica": "kg" },
+      { "naziv_sastojka": "Luk", "kolicina": 1.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Češnjak",
+        "kolicina": 3.0,
+        "mjerna_jedinica": "češnja"
+      },
+      { "naziv_sastojka": "Lovor", "kolicina": 1.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Bijelo vino",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "malo"
+      },
+      {
+        "naziv_sastojka": "Krumpir",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Peršin",
+        "kolicina": 0.5,
+        "mjerna_jedinica": "vezica"
+      },
+      {
+        "naziv_sastojka": "Sol",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "prstohvata"
+      },
+      { "naziv_sastojka": "Papar", "kolicina": 3.0, "mjerna_jedinica": "zrna" },
+      { "naziv_sastojka": "Voda", "kolicina": 2.0, "mjerna_jedinica": "l" },
+      {
+        "naziv_sastojka": "Vinski ocat",
+        "kolicina": 50.0,
+        "mjerna_jedinica": "ml"
+      }
+    ]
+  },
+  {
+    "id_recepta": 10,
+    "naziv_recepta": "Fritule",
+    "opis_recepta": "Male pržene kuglice od tijesta, često posute šećerom u prahu.",
+    "recept_youtube_url": "https://www.youtube.com/watch?v=1qLk3Xwcsq4",
+    "koraci_recepta": "Napraviti tijesto, oblikovati male kuglice i pržiti.",
+    "recept_wiki_url": "https://hr.wikipedia.org/wiki/Fritule",
+    "vrijeme_pripreme": "00:20:00",
+    "vrijeme_kuhanja": "00:10:00",
+    "broj_porcija": 6,
+    "tezina": "Jednostavno",
+    "drzava": {
+      "drzava_id": 6,
+      "naziv_drzave": "Hrvatska",
+      "glavni_grad": "Zagreb",
+      "zastava_url": "https://flagsapi.com/HR/flat/64.png",
+      "regija": "Jugoistočna Europa"
+    },
+    "sastojci": [
+      {
+        "naziv_sastojka": "Mješavina za fritule i krafne",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "kg"
+      },
+      {
+        "naziv_sastojka": "Dolcela Prašak za pecivo",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      { "naziv_sastojka": "Jaja", "kolicina": 3.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Jogurt",
+        "kolicina": 700.0,
+        "mjerna_jedinica": "ml"
+      },
+      {
+        "naziv_sastojka": "Korica limuna",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "kom"
+      },
+      {
+        "naziv_sastojka": "Korica naranče",
+        "kolicina": 1.0,
+        "mjerna_jedinica": "kom"
+      },
+      { "naziv_sastojka": "Jabuke", "kolicina": 2.0, "mjerna_jedinica": "kom" },
+      {
+        "naziv_sastojka": "Rakija lozovača",
+        "kolicina": 4.0,
+        "mjerna_jedinica": "žlice"
+      },
+      {
+        "naziv_sastojka": "Vanilin šećer",
+        "kolicina": 2.0,
+        "mjerna_jedinica": "kom"
+      },
+      { "naziv_sastojka": "Ulje", "kolicina": 100.0, "mjerna_jedinica": "ml" },
+      {
+        "naziv_sastojka": "Pekmez od šljiva",
+        "kolicina": 100.0,
+        "mjerna_jedinica": "g"
+      }
+    ]
+  }
+]

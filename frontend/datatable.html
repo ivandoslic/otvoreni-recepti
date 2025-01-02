@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recipes Data Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div x-data="recipesTable()" x-init="fetchRecipes()">
+        <a href="index.html">Natrag</a>
+      <h1>Tablični prikaz podataka</h1>
+      <div class="filters">
+        <div>
+          <label for="pretraga">Pretraga:</label><br />
+          <input
+            id="pretraga"
+            type="text"
+            x-model="pretraga"
+            placeholder="Unesite tekst..."
+          />
+        </div>
+
+        <div>
+          <label for="atribut">Filter po atributu:</label><br />
+          <select id="atribut" x-model="atribut">
+            <option value="">Svi atributi (Wildcard)</option>
+            <template x-for="attribute in attributes" :key="attribute">
+              <option x-text="attribute"></option>
+            </template>
+          </select>
+        </div>
+      </div>
+
+      <table id="tablica">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Naziv recepta</th>
+            <th>Opis</th>
+            <th>Težina</th>
+            <th>Država podrijetla</th>
+            <th>Br. porcija</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template x-for="recipe in filteredRecipes" :key="recipe.id_recepta">
+            <tr>
+              <td x-text="recipe.id_recepta"></td>
+              <td x-text="recipe.naziv_recepta"></td>
+              <td x-text="recipe.opis_recepta"></td>
+              <td x-text="recipe.tezina"></td>
+              <td>
+                <img
+                  :src="recipe.drzava?.zastava_url"
+                  alt="Flag"
+                  width="24"
+                  height="16"
+                  class="country-flag"
+                  x-show="recipe.drzava?.zastava_url"
+                />
+                <span x-text="recipe.drzava?.naziv_drzave || 'N/A'"></span>
+              </td>
+              <td x-text="recipe.broj_porcija"></td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+      <p>* koraci i sastojci nisu prikazani u tablici</p>
+      
+      <div class="download-buttons">
+        <h3>Želite li preuzeti trenutno prikazane podatke?</h3>
+        <div>
+            <button @click="downloadJSON()">Preuzmi JSON</button>
+            <button @click="downloadCSV()">Preuzmi CSV</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

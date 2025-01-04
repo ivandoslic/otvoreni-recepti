@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   frontend:
-    image: ivandoslic/recipes_frontend:v1
+    image: ivandoslic/recipes_frontend:v2
     container_name: recipes_frontend
     ports:
       - "80:80"
   backend:
-    image: ivandoslic/recipes_backend:v3
+    image: ivandoslic/recipes_backend:v4
     container_name: recipes_backend
     ports:
       - "8080:8080"

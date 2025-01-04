@@ -1,0 +1,580 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Otvoreni Recepti API",
+    "description": "API za upravljanje receptima stvoren za predemet Otvorenog Računarstva",
+    "version": "1.0.0",
+    "contact": {
+      "email": "ivan.doslic@fer.hr"
+    },
+    "license": {
+      "name": "CC0 1.0 Universal (Public Domain Dedication)",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Lokalni razvojni server"
+    }
+  ],
+  "paths": {
+    "/api/recepti": {
+      "get": {
+        "tags": ["collection"],
+        "summary": "Dohvati sve recepte",
+        "description": "Dohvaća recepte na temelju dostupnih filtara.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "ID recepta",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "naziv",
+            "in": "query",
+            "description": "Naziv recepta (koristi LIKE za djelomično podudaranje)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tezina",
+            "in": "query",
+            "description": "Težina pripreme recepta (Jednostavno, Srednje, Teško)",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["Jednostavno", "Srednje", "Teško"]
+            }
+          },
+          {
+            "name": "drzava_id",
+            "in": "query",
+            "description": "ID države iz koje recept potječe",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Uspješno dohvaćeni recepti",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Recipe"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nema pronađenih recepata"
+          },
+          "500": {
+            "description": "Neuspješno dohvaćanje recepata"
+          }
+        }
+      },
+      "post": {
+        "tags": ["single"],
+        "summary": "Dodaj novi recept",
+        "description": "Dodaje novi recept u bazu podataka.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecipeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Recept uspješno stvoren. Vraća stvoreni recept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recipe"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Pogrešni podaci"
+          },
+          "500": {
+            "description": "Greška na serveru"
+          }
+        }
+      }
+    },
+    "/api/recepti/{id}": {
+      "get": {
+        "tags": ["single"],
+        "summary": "Dohvati recept po ID-ju",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "examples": {
+              "sarma": {
+                "description": "Sarma recept",
+                "value": 2
+              },
+              "cobanac": {
+                "description": "Čobanac recept",
+                "value": 3
+              },
+              "fuzi": {
+                "description": "Fuži s tartufima recept",
+                "value": 4
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Uspješno dohvaćen recept",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recipe"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nema takvog recepta"
+          },
+          "500": {
+            "description": "Neuspješno dohvaćanje recepta"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["single"],
+        "summary": "Obriši recept",
+        "description": "Briše recept s danim ID-jem.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recept uspješno obrisan. Vraća obrisani recept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recipe"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Recept nije pronađen"
+          },
+          "500": {
+            "description": "Greška na serveru"
+          }
+        }
+      },
+      "put": {
+        "tags": ["single"],
+        "summary": "Ažuriraj postojeći recept",
+        "description": "Ažurira recept sa zadanim ID-jem.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            },
+            "description": "ID recepta koji se ažurira"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Recipe"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Recept uspješno ažuriran. Vraća ažurirani recept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recipe"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Recept nije pronađen"
+          },
+          "500": {
+            "description": "Neuspješno ažuriranje recepta"
+          }
+        }
+      }
+    },
+    "/api/drzave": {
+      "get": {
+        "summary": "Dohvati sve države",
+        "description": "Dohvaća sve dostupne države",
+        "responses": {
+          "200": {
+            "description": "Uspješno dohvaćene države",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DetailedCountry"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nema pronađenih država"
+          },
+          "500": {
+            "description": "Neuspješno dohvaćanje država"
+          }
+        }
+      }
+    },
+    "/api/drzave/{id}": {
+      "get": {
+        "summary": "Dohvati državu po ID-ju",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Uspješno dohvaćena država",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailedCountry"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nema takve države"
+          },
+          "500": {
+            "description": "Neuspješno dohvaćanje države"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Recipe": {
+        "type": "object",
+        "required": [
+          "id_recepta",
+          "naziv_recepta",
+          "opis_recepta",
+          "recept_youtube_url",
+          "koraci_recepta",
+          "vrijeme_pripreme",
+          "vrijeme_kuhanja",
+          "broj_porcija",
+          "tezina",
+          "drzava",
+          "sastojci"
+        ],
+        "properties": {
+          "id_recepta": {
+            "type": "integer",
+            "example": 1
+          },
+          "naziv_recepta": {
+            "type": "string",
+            "example": "Pašticada"
+          },
+          "opis_recepta": {
+            "type": "string",
+            "example": "Tradicionalno jelo od goveđeg mesa u bogatom umaku, najčešće posluženo s domaćim njokima."
+          },
+          "recept_youtube_url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://youtu.be/XAE1C4bC9IE?si=yV25H16s-deEe2zB"
+          },
+          "koraci_recepta": {
+            "type": "string",
+            "example": "Meso se marinira preko noći, zatim se polako kuha u umaku od vina, začina i povrća."
+          },
+          "recept_wiki_url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://hr.wikipedia.org/wiki/Pa%C5%A1ticada"
+          },
+          "vrijeme_pripreme": {
+            "type": "string",
+            "format": "time",
+            "example": "02:00:00"
+          },
+          "vrijeme_kuhanja": {
+            "type": "string",
+            "format": "time",
+            "example": "03:00:00"
+          },
+          "broj_porcija": {
+            "type": "integer",
+            "example": 6
+          },
+          "tezina": {
+            "type": "string",
+            "enum": ["Jednostavno", "Srednje", "Teško"],
+            "example": "Srednje"
+          },
+          "drzava": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "sastojci": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            }
+          }
+        }
+      },
+      "Country": {
+        "type": "object",
+        "required": [
+          "drzava_id",
+          "naziv_drzave",
+          "glavni_grad",
+          "zastava_url",
+          "regija"
+        ],
+        "properties": {
+          "drzava_id": {
+            "type": "integer",
+            "example": 6
+          },
+          "naziv_drzave": {
+            "type": "string",
+            "example": "Hrvatska"
+          },
+          "glavni_grad": {
+            "type": "string",
+            "example": "Zagreb"
+          },
+          "zastava_url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://flagsapi.com/HR/flat/64.png"
+          },
+          "regija": {
+            "type": "string",
+            "example": "Jugoistočna Europa"
+          }
+        }
+      },
+      "Ingredient": {
+        "type": "object",
+        "required": ["naziv_sastojka", "kolicina", "mjerna_jedinica"],
+        "properties": {
+          "naziv_sastojka": {
+            "type": "string",
+            "example": "Goveđi but"
+          },
+          "kolicina": {
+            "type": "number",
+            "format": "float",
+            "example": 1.6
+          },
+          "mjerna_jedinica": {
+            "type": "string",
+            "example": "kg"
+          }
+        }
+      },
+      "DetailedCountry": {
+        "type": "object",
+        "properties": {
+          "drzava_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "naziv_drzave": {
+            "type": "string",
+            "example": "Italija"
+          },
+          "glavni_grad": {
+            "type": "string",
+            "example": "Rim"
+          },
+          "povrsina": {
+            "type": "integer",
+            "description": "Površina države u kvadratnim kilometrima",
+            "example": 301340
+          },
+          "broj_stanovnika": {
+            "type": "string",
+            "description": "Broj stanovnika",
+            "example": "60244639"
+          },
+          "valuta": {
+            "type": "string",
+            "description": "Službena valuta države",
+            "example": "Euro"
+          },
+          "jezik": {
+            "type": "string",
+            "description": "Službeni jezik države",
+            "example": "Talijanski"
+          },
+          "kontinent": {
+            "type": "string",
+            "description": "Kontinent na kojem se država nalazi",
+            "example": "Europa"
+          },
+          "zastava_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL slike zastave države",
+            "example": "https://flagsapi.com/IT/flat/64.png"
+          },
+          "datum_osnivanja": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Datum osnivanja države",
+            "example": "1861-03-17T00:00:00.000Z"
+          },
+          "regija": {
+            "type": "string",
+            "description": "Regija države",
+            "example": "Južna Europa"
+          },
+          "bdp": {
+            "type": "number",
+            "format": "double",
+            "description": "Bruto domaći proizvod (BDP) u dolarima",
+            "example": 2000000000000
+          }
+        }
+      },
+      "CreateRecipeDTO": {
+        "type": "object",
+        "required": [
+          "naziv",
+          "opis",
+          "youtube_url",
+          "koraci_recepta",
+          "vrijeme_pripreme",
+          "vrijeme_kuhanja",
+          "broj_porcija",
+          "tezina",
+          "drzava_id",
+          "kategorija_id"
+        ],
+        "properties": {
+          "naziv": {
+            "type": "string",
+            "example": "Pašticada",
+            "description": "Naziv recepta"
+          },
+          "opis": {
+            "type": "string",
+            "example": "Tradicionalno jelo od goveđeg mesa u bogatom umaku.",
+            "description": "Opis recepta"
+          },
+          "youtube_url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://youtu.be/XAE1C4bC9IE?si=yV25H16s-deEe2zB",
+            "description": "YouTube URL za video recept"
+          },
+          "koraci_recepta": {
+            "type": "string",
+            "example": "Meso se marinira preko noći, zatim se polako kuha u umaku.",
+            "description": "Koraci pripreme recepta"
+          },
+          "wiki_url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://hr.wikipedia.org/wiki/Pa%C5%A1ticada",
+            "description": "Wikipedia URL recepta"
+          },
+          "vrijeme_pripreme": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}:\\d{2}$",
+            "example": "02:00:00",
+            "description": "Vrijeme pripreme u formatu HH:MM:SS"
+          },
+          "vrijeme_kuhanja": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}:\\d{2}$",
+            "example": "03:00:00",
+            "description": "Vrijeme kuhanja u formatu HH:MM:SS"
+          },
+          "broj_porcija": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 6,
+            "description": "Broj porcija"
+          },
+          "tezina": {
+            "type": "string",
+            "enum": ["Jednostavno", "Srednje", "Teško"],
+            "example": "Srednje",
+            "description": "Težina pripreme"
+          },
+          "drzava_id": {
+            "type": "integer",
+            "example": 6,
+            "description": "ID države iz koje recept potječe"
+          },
+          "kategorija_id": {
+            "type": "integer",
+            "example": 2,
+            "description": "ID kategorije recepta"
+          }
+        }
+      }
+    }
+  }
+}

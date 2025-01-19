@@ -220,7 +220,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Recipe"
+                "$ref": "#/components/schemas/CreateRecipeDTO"
               }
             }
           }
